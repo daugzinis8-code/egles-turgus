@@ -10,7 +10,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     caption = update.message.caption or "Be kainos"
     await update.message.reply_text(f"✅ GAVAU foto! Kaina: {caption}\nSkelbimas patalpintas!")
-    # Čia vėliau patalpinsim į kanalą
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"Gavau: {update.message.text} - siųsk foto!")
