@@ -1,7 +1,7 @@
 import os
 import telebot
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("8667731379:AAHbYqTHV8zZ9A7kmRkEagkcZmGKALHA2C4")
 if not TOKEN:
     raise ValueError("BOT_TOKEN nerastas!")
 
