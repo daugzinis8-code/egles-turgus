@@ -1,15 +1,12 @@
 import os
 import telebot
 
-TOKEN = os.getenv("8667731379:AAHbYqTHV8zZ9A7kmRkEagkcZmGKALHA2C4")
-if not TOKEN:
-    raise ValueError("BOT_TOKEN nerastas!")
-
+TOKEN = os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "🎄 Sveikas! EGLĖS TURGUS! Siųsk eglutės foto!")
+    bot.reply_to(message, "🎄 Sveikas! EGLES TURGUS! Siusk eglutes foto!")
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
@@ -18,7 +15,7 @@ def handle_photo(message):
 
 @bot.message_handler(func=lambda m: True)
 def handle_text(message):
-    bot.reply_to(message, f"Gavau: {message.text} - siųsk foto!")
+    bot.reply_to(message, f"Gavau: {message.text} - siusk foto!")
 
 print("Botas paleistas!")
 bot.infinity_polling()
