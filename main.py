@@ -11,7 +11,7 @@ def start(message):
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
     caption = message.caption or "Be kainos"
-    bot.reply_to(message, f"✅ GAVAU foto! Kaina: {caption}\nSkelbimas patalpintas!")
+    bot.reply_to(message, f"✅ GAVAU foto! Kaina: {caption}")
 
 @bot.message_handler(func=lambda m: True)
 def handle_text(message):
