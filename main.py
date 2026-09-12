@@ -1,7 +1,7 @@
 import telebot, json, os, time
 from telebot import types
 
-TOKEN = "ČIA ĮKLIJUOK SAVO TOKENĄ"
+TOKEN = "8667731379:AAHGElYC3kut4M5zcXhPJy_OY35nrwJHeSA"
 
 bot = telebot.TeleBot(TOKEN)
 DB_FILE = "turgus_db.json"
